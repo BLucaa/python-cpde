@@ -71,12 +71,14 @@ def KMC1(position_0, gamma_1, gamma_2,N):
     return pos_array
 
 #%%test KMC1
-position_0 =[0,0]
-gamma_1 =1/2
-gamma_2 = 1/2
-N=200
-a= np.array(KMC1(position_0, gamma_1, gamma_2,N))
-print(a) 
+if __name__ == "__main__":
+        
+    position_0 =[0,0]
+    gamma_1 =1/2
+    gamma_2 = 1/2
+    N=200
+    a= np.array(KMC1(position_0, gamma_1, gamma_2,N))
+    print(a) 
 
 #%% KMC 2 
 @numba.jit(nopython=True)
@@ -164,11 +166,12 @@ def KMC2(position_0, gamma_1, gamma_2, a,b ,N):
     return pos_array
 
 #%%test KMC2
-position_0 =[0,0,0]
-gamma_1 =1/2
-gamma_2 = 1/2
-a=1
-b=1
-N=200
-a= np.array(KMC2(position_0, gamma_1, gamma_2, a,b ,N))
-print(a) 
+if __name__ == "__main__" : 
+    position_0 =[0,0,0]
+    gamma_1 =1/2
+    gamma_2 = 1/2
+    a=1
+    b=1
+    N=200
+    a= np.array(KMC2(position_0, gamma_1, gamma_2, a,b ,N))
+    print(a) 
