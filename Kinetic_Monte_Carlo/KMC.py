@@ -125,7 +125,7 @@ def KMC2(position_0, gamma_1, gamma_2, a,b ,N):
                 position[2] = 0
                 
         elif  gamma*x_1 > gamma_1 : 
-            #
+            #rotation around the atom 
             if position[2] == 0: 
                 position[1] = position[1] - b 
                 if x_2 == 0 : 
@@ -171,7 +171,7 @@ def KMC2(position_0, gamma_1, gamma_2, a,b ,N):
 #%%test KMC2
 if __name__ == "__main__" : 
     position_0 =[0,0,0]
-    gamma_1 =1/2
+    gamma_1 = 1/2
     gamma_2 = 1/2
     a=1
     b=1
