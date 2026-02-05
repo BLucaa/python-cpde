@@ -1,4 +1,23 @@
 #KMc
+"""
+Kinetic Monte Carlo Simulation Module
+=====================================
+
+This module provides functions for performing Kinetic Monte Carlo (KMC) simulations
+of hydrogen atom hopping on lattice structures.
+
+The module includes:
+    - KMC1: Simple 2D lattice hopping simulation
+    - KMC2: 2D lattice hopping with multiple transition types
+
+Example:
+    >>> import numpy as np
+    >>> from KMC import KMC1, KMC2
+    >>> 
+    >>> # Simple 2D simulation
+    >>> initial_pos = [0, 0]
+    >>> trajectory = KMC1(initial_pos, 0.5, 0.5, 1000)
+"""
 #%%
 import numpy as np 
 import numba 
