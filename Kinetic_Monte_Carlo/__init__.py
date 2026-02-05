@@ -1,3 +1,4 @@
+#%%
 """
 Kinetic Monte Carlo Simulation Package
 =====================================
@@ -9,8 +10,12 @@ Functions:
     KMC1: 2D lattice hopping simulation
     KMC2: 2D lattice hopping simulation with complex transitions
 """
+import os 
+import sys
 
-from .KMC import KMC1, KMC2
+sys.path.insert(0, r'd:\python cpde\Kinetic_Monte_Carlo')
+
+from KMC import KMC1, KMC2
 
 __version__ = "1.0.0"
 __author__ = "Luca Berruezo and Hadrien Yim"

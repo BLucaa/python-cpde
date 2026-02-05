@@ -42,7 +42,7 @@ def KMC1(position_0, gamma_1, gamma_2,N):
     
     position = position_0.copy()
     gamma = gamma_1 + gamma_2
-    pos_array = []
+    pos_array = np.zeros((N, 2), dtype=np.float64)
     for i in range(N):
         x_1 = np.random.rand(1)[0]
         x_2 = np.random.randint(0,4,1)[0]
@@ -65,7 +65,10 @@ def KMC1(position_0, gamma_1, gamma_2,N):
             else :
                 position[1] = position[1] + 1
                 position[0] = position[0] + 1
-        pos_array.append(position.copy())
+        
+        pos_array[i, 0] = position[0]
+        pos_array[i, 1] = position[1]
+        
         
     
     return pos_array
@@ -101,7 +104,7 @@ def KMC2(position_0, gamma_1, gamma_2, a,b ,N):
     gamma = gamma_1 + gamma_2
     d_1 = a - 2*b
     d_2 = math.sqrt(2)*b
-    pos_array = pos_array = np.zeros((N, 3), dtype=np.float64)
+    pos_array = np.zeros((N, 3), dtype=np.float64)
     
     for i in range(N):
         x_1 = np.random.rand(1)[0]

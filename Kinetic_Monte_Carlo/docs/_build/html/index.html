@@ -1,0 +1,238 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kinetic Monte Carlo Simulation Documentation &mdash; Kinetic Monte Carlo Simulation 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Reference" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Kinetic Monte Carlo Simulation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Kinetic Monte Carlo Simulation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Kinetic Monte Carlo Simulation Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="kinetic-monte-carlo-simulation-documentation">
+<h1>Kinetic Monte Carlo Simulation Documentation<a class="headerlink" href="#kinetic-monte-carlo-simulation-documentation" title="Link to this heading"></a></h1>
+<p>Welcome to the Kinetic Monte Carlo (KMC) simulation documentation. This package
+provides efficient implementations for simulating hydrogen atom hopping on lattice
+structures using the kinetic Monte Carlo method.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#module-KMC">KMC Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#basic-2d-simulation">Basic 2D Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#d-lattice-simulation">3D Lattice Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#performance-comparison">Performance Comparison</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Fast Numba-accelerated simulations</strong> - Up to 100x speedup over pure Python</p></li>
+<li><p><strong>2D and 3D lattice hopping</strong> - Support for various lattice geometries</p></li>
+<li><p><strong>Multiple transition types</strong> - Simple and complex hopping mechanisms</p></li>
+<li><p><strong>Well-documented API</strong> - Comprehensive docstrings and examples</p></li>
+</ul>
+</section>
+<section id="quick-start">
+<h2>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">KMC</span><span class="w"> </span><span class="kn">import</span> <span class="n">KMC1</span><span class="p">,</span> <span class="n">KMC2</span>
+
+<span class="c1"># Simple 2D simulation</span>
+<span class="n">initial_position</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">trajectory</span> <span class="o">=</span> <span class="n">KMC1</span><span class="p">(</span><span class="n">initial_position</span><span class="p">,</span> <span class="n">gamma_1</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">gamma_2</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># 3D simulation with complex hopping</span>
+<span class="n">initial_3d</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">trajectory_3d</span> <span class="o">=</span> <span class="n">KMC2</span><span class="p">(</span><span class="n">initial_3d</span><span class="p">,</span> <span class="n">gamma_1</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">gamma_2</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># Plot trajectory</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">trajectory</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">trajectory</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;X Position&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Y Position&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;2D Random Walk Trajectory&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="module-KMC">
+<span id="api-reference"></span><h1>API Reference<a class="headerlink" href="#module-KMC" title="Link to this heading"></a></h1>
+<section id="kinetic-monte-carlo-simulation-module">
+<h2>Kinetic Monte Carlo Simulation Module<a class="headerlink" href="#kinetic-monte-carlo-simulation-module" title="Link to this heading"></a></h2>
+<p>This module provides functions for performing Kinetic Monte Carlo (KMC) simulations
+of hydrogen atom hopping on lattice structures.</p>
+<dl class="simple">
+<dt>The module includes:</dt><dd><ul class="simple">
+<li><p>KMC1: Simple 2D lattice hopping simulation</p></li>
+<li><p>KMC2: 2D lattice hopping with multiple transition types</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">KMC</span><span class="w"> </span><span class="kn">import</span> <span class="n">KMC1</span><span class="p">,</span> <span class="n">KMC2</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Simple 2D simulation</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">initial_pos</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">trajectory</span> <span class="o">=</span> <span class="n">KMC1</span><span class="p">(</span><span class="n">initial_pos</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="KMC.KMC1">
+<span class="sig-prename descclassname"><span class="pre">KMC.</span></span><span class="sig-name descname"><span class="pre">KMC1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position_0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/KMC.html#KMC1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#KMC.KMC1" title="Link to this definition"></a></dt>
+<dd><p>KMC on a normalized lattice
+simple hopping of an hydrigen atom on a lattice</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>position_0</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>gamma_1</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>gamma_2</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>N</strong> (<em>_type_</em>) – _description_</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>_description_</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>_type_</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="KMC.KMC2">
+<span class="sig-prename descclassname"><span class="pre">KMC.</span></span><span class="sig-name descname"><span class="pre">KMC2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position_0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/KMC.html#KMC2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#KMC.KMC2" title="Link to this definition"></a></dt>
+<dd><p>_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>position_0</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>gamma_1</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>gamma_2</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>a</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>b</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>N</strong> (<em>_type_</em>) – _description_</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>_description_</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>_type_</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Luca Berruezo and Hadrien Yim.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

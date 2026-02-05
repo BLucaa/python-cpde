@@ -1,9 +1,19 @@
-# Configuration file for the Sphinx documentation builder.
-# Configuration file for the Sphinx documentation builder.
-
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..'))
+
+# Add the directory containing KMC.py to the path
+kmc_dir = os.path.abspath(os.path.join('..', '..'))
+sys.path.insert(0, kmc_dir)
+
+print(f"Added to sys.path: {kmc_dir}")
+print(f"Files in KMC directory: {os.listdir(kmc_dir)}")
+
+# Test import for debugging
+try:
+    import KMC
+    print("✅ KMC module imported successfully during doc build")
+except ImportError as e:
+    print(f"❌ KMC import failed during doc build: {e}")
 
 # -- Project information -----------------------------------------------------
 project = 'Kinetic Monte Carlo Simulation'
@@ -17,7 +27,6 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
     'sphinx.ext.mathjax',
-    'numpydoc',
 ]
 
 templates_path = ['_templates']
@@ -30,13 +39,6 @@ html_static_path = ['_static']
 # -- Napoleon settings -------------------------------------------------------
 napoleon_google_docstring = True
 napoleon_numpy_docstring = True
-napoleon_include_init_with_doc = False
-napoleon_include_private_with_doc = False
-napoleon_include_special_with_doc = True
-napoleon_use_admonition_for_examples = False
-napoleon_use_admonition_for_notes = False
-napoleon_use_admonition_for_references = False
-napoleon_use_ivar = False
 napoleon_use_param = True
 napoleon_use_rtype = True
 
@@ -47,5 +49,8 @@ autodoc_default_options = {
     'show-inheritance': True,
 }
 
-# Mock imports for modules that might not be available during doc build
+# Mock imports for problematic modules
 autodoc_mock_imports = ['numba']
+
+# Set master document
+master_doc = 'index'
