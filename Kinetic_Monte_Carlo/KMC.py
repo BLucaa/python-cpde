@@ -160,7 +160,7 @@ def KMC2(position_0, gamma_1, gamma_2, a,b ,N):
                     position[2] = 0
                 else : 
                     position[1] = position[1] - b
-                    position[2] = 0
+                    position[2] = 2
             
         pos_array[i, 0] = position[0]
         pos_array[i, 1] = position[1]
@@ -170,9 +170,9 @@ def KMC2(position_0, gamma_1, gamma_2, a,b ,N):
 
 #%%test KMC2
 if __name__ == "__main__" : 
-    position_0 =[0,0,0]
-    gamma_1 = 1/2
-    gamma_2 = 1/2
+    position_0 =[0,1,0]
+    gamma_1 = 0
+    gamma_2 = 1
     a=1
     b=1
     N=200
